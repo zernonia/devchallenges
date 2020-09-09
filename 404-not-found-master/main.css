@@ -1,0 +1,167 @@
+html{
+  --backg: white;
+  --text: black;
+  --alt-text : #4F4F4F;
+  background: var(--backg);
+  /* transition: 0.2s; */
+  color: var(--text);
+}
+
+html[data-theme='dark']{
+  --backg: #292929;
+  --text: white;
+  --alt-text : whitesmoke;
+}
+
+* {
+  margin: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.container {
+  padding: 2rem 5rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+header {
+  height: 60px;
+  font-family: Inconsolata;
+  font-size: 24px;
+  line-height: 25px;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+  align-self: start;
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+svg {
+  height : 24px;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+#main-image{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+#main-image img {
+  width: 80%;
+  height: 100%;
+}
+
+#error-content {
+  width: 50%;
+  padding: 2rem;
+}
+
+#error-content h1 {
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 5vw;
+  line-height: 7vw;
+  letter-spacing: -0.035em;
+}
+
+#error-content p {
+  width: 400px;
+  margin-top: 2.5rem;
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.035em;
+  color: var(--alt-text);
+}
+
+#error-content button {
+  background: #333333;
+  margin-top: 3rem;
+  border: none;
+  padding: 1.5rem 3rem;
+  color: white;
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+footer {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@media screen and (max-width: 768px){
+  main {
+    padding: 0rem;
+    flex-direction: column;
+  }
+  #main-image img{
+    width: 100%;
+  }
+  #error-content { 
+    width: 100%;
+  }
+  #error-content p {
+    width: auto;
+  }
+}
+@media screen and (max-width: 500px){
+  .container {
+    padding : 1.5rem;
+  }
+  #error-content { 
+    width: auto;
+    padding: 0;
+  }
+  #main-image {
+    margin-top: 2rem;
+    width: 80%;
+  }
+
+  #error-content h1{ 
+    font-size: 40px;
+    line-height: 71px;
+    letter-spacing: -0.035em;
+    
+  }
+  #error-content p {
+    width: auto;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.035em;
+  }
+  
+}
