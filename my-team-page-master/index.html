@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <title>The creative crew</title>
+</head>
+<body>
+  <div class="container">
+    <main>
+      <header class="top-content">
+        <div id="title-box">
+          <h1 id="title">The creative crew</h1>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </div>
+        <div>
+          <h2>who are we</h2>
+          <h3>We are team of creatively diverse. driven. innovative individuals working in various locations from the world</h3>
+        </div>
+      </header>
+      <div class="gallery">
+        <div class="gallery-photo">
+          <img src="photo1.png" alt="">
+          <h2>Bill Mahoney</h2>
+          <p>Product Owner</p>
+        </div>
+        <div class="gallery-photo">
+          <img src="photo2.png" alt="">
+          <h2>Saba Cabrera</h2>
+          <p>Art Director</p>
+        </div>
+        <div class="gallery-photo">
+          <img src="photo3.png" alt="">
+          <h2>Shae Le</h2>
+          <p>Tech Lead</p>
+        </div>
+        <div class="gallery-photo">
+          <img src="photo4.png" alt="">
+          <h2>Skylah Lu</h2>
+          <p>UX Designer</p>
+        </div>
+        <div class="gallery-photo">
+          <img src="photo5.png" alt="">
+          <h2>Griff Richards</h2>
+          <p>Developer</p>
+        </div>
+        <div class="gallery-photo">
+          <img src="photo6.png" alt="">
+          <h2>Stan John</h2>
+          <p>Developer</p>
+        </div>
+      </div>
+    </main>
+    <footer>Zernonia @ DevChallenges.io</footer>
+  </div>
+
+  <script>
+    let light
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+      light = false
+      document.documentElement.setAttribute('data-theme', 'dark')
+    } else {
+      light = true
+    }
+    let svg = document.querySelector('svg')
+    svg.onclick = () => {
+      if(light){
+        light = false
+        document.documentElement.setAttribute('data-theme', 'dark')
+      } else {
+        light = true
+        document.documentElement.setAttribute('data-theme', 'light')
+      }
+    }
+  </script>
+</body>
+</html>
