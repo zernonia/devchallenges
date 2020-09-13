@@ -58,6 +58,7 @@ nav div li {
   text-decoration: none;
   display: block;
   padding: 0rem 1.5rem;
+  cursor: pointer;
 }
 #close-menu {
   display: none;
