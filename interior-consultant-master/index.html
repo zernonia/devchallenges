@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <title>Interior Consultant</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-main">
+        <div id="logo">This Interior</div>
+        <svg id="dark-button" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      </div>
+      <nav>
+        <svg id="open-menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <div>
+          <svg id="close-menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          <li class="selected">Home</li>
+          <li>Collection</li>
+          <li>About</li>
+          <li>Contact</li>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="content">
+        <h1>Modern interior</h1>
+        <h2>A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.</h2>
+        <button>Read more 
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </button>
+      </div>
+      <div id="image">
+        <img id="main-image"src="photo1.png" alt="">
+        <div id="info">
+          <div id="top">
+            <img src="photo2.png" alt="">
+            <div>
+              <h3>Aliza Webber</h3>
+              <h4>Interior designer</h4>
+            </div>
+          </div>
+          <h3 id="alt-text">Designed in 2020 by Aliza Webber</h3>
+        </div>
+      </div>
+    </main>
+    <footer>Zernonia @ DevChallenges.io</footer>
+  </div>
+
+  <script>
+    let light = false
+    document.documentElement.setAttribute('data-theme', 'dark')
+
+    let navSvg = document.getElementById('open-menu')
+    let darkButton = document.getElementById('dark-button')
+    let navDiv = document.querySelector('nav div')
+    let navSvgClose = document.getElementById('close-menu')
+
+    navSvg.onclick = () => {
+      navDiv.style.display = 'flex'
+    }
+
+    navSvgClose.onclick = () => {
+      navDiv.style.display = 'none'
+    }
+
+    window.onresize = () => {
+      let width = window.screen.width
+      if(width > 636){
+        navDiv.style.display = 'flex'
+      } else if (width == 636) {
+        navDiv.style.display = 'none'
+      }
+    }
+
+    darkButton.onclick = () => {
+      if(light){
+        light = false
+        document.documentElement.setAttribute('data-theme', 'dark')
+      } else {
+        light = true
+        document.documentElement.setAttribute('data-theme', 'light')
+      }
+    }
+  </script>
+</body>
+</html>
