@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <title>My Gallery</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <svg style="cursor : pointer;" id="dark" xmlns="http://www.w3.org/2000/svg" width="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+      </svg>
+      <img src="profilePhoto.png" alt="">
+      <h1>Rodney Cotton</h1>
+      <h2>Helsinki, Finland</h2>
+      <div class="info">
+        <div class="posts">100<br>Posts</div>
+        <div class="follower">2,242<br>Follower</div>
+        <div class="following">1,432<br>Following</div>
+      </div>
+    </header>
+    <main>
+      <img id="img-1" src="photo1.png" alt="">
+      <img id="img-2" src="photo2.png" alt="">
+      <img id="img-3" src="photo3.png" alt="">
+      <img id="img-4" src="photo4.png" alt="">
+      <img id="img-5" src="photo5.png" alt="">
+      <img id="img-6" src="photo6.png" alt="">
+    </main>
+    <footer>Zernonia @ DevChallenges.io</footer>
+  </div>
+
+  <script>
+    let light
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+      light = false
+      document.documentElement.setAttribute('data-theme', 'dark')
+    } else {
+      light = true
+    }
+
+    let svg = document.querySelector('#dark')
+    svg.onclick = () => {
+      if(light){
+        light = false
+        document.documentElement.setAttribute('data-theme', 'dark')
+      } else {
+        light = true
+        document.documentElement.setAttribute('data-theme', 'light')
+      }
+    }
+  </script>
+</body>
+</html>
