@@ -1,0 +1,257 @@
+html{
+  --backg: white;
+  --text: black;
+  --text-rev : white;
+  --text-alt : #cacaca;
+  --shadow: #d1d1d1;
+  background: var(--backg);
+  color: var(--text);
+}
+
+html[data-theme='dark']{
+  --backg: #1f1e1e;
+  --text: white;
+  --text-alt : #828282;
+  --text-rev : black;
+  --shadow: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+header h1 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: clamp(24px , 6vw, 48px);
+  line-height: 64px;
+}
+
+.sub-header {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.sub-header img {
+  margin-top: 0.25rem;
+}
+.sub-header h2 {
+  margin-left: 1rem;
+  min-width: 50vw;
+  max-width: 55vw;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+main {
+  margin-top: 2rem;
+}
+#main-image {
+  width: 100%;
+  border-radius: 0.75rem;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+article {
+  width: 85%;
+  padding-right: 5rem;
+}
+article h3 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 2rem;
+}
+article h4 {
+  font-family: Playfair Display;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 1.5rem 0rem;
+}
+article p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  margin-left: 1.25rem;
+}
+.ingredient input {
+  margin-top: 0.35rem;
+  cursor: pointer;
+}
+.checklist {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.ingre-div {
+  margin: 0.5rem 0;
+}
+.instruction h3 {
+  margin-bottom: 2rem;
+}
+.instruction p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+}
+.step-div {
+  margin: 2rem 0;
+}
+.step {
+  background: #F2994A;
+  border-radius: 6px;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  justify-content: center;
+  margin-top: 0.35rem;
+}
+.step h3 {
+  line-height: 28px;
+  color: white;
+  margin: 0;
+}
+.info {
+  max-width: 600px;
+}
+aside {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 3rem;
+  width: 17.5%;
+  min-height: 100px;
+  height: 100%;
+  max-width: 200px;
+  margin-top: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 9px -2px var(--shadow);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.servings {
+  color: #F2994A;
+}
+.side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem 0rem;
+}
+.side svg {
+  margin-right: 0.75rem;
+}
+.side-text h5 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: var(--text-alt);
+}
+.side-text p {
+  margin-top: 0.25rem;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+#source {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #BDBDBD;
+  margin: 0;
+  margin-top: 3rem;
+  word-wrap: break-word;
+  display: inline-block;
+}
+footer {
+  margin-top: 3rem;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    flex-direction: column-reverse;
+  }
+  .sub-header h2 {
+   max-width: unset; 
+  }
+  aside {
+    top: 0;
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: -webkit-fill-available;
+  }
+  .side {
+    width: 130px;
+  }
+  article {
+    padding-right: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .container {
+    padding: 1rem;
+  }
+}

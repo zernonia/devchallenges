@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <title>Recipe Page</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div style="display: flex; align-items: center;">
+        <h1>Classic Cheesecake Recipe</h1>
+        <svg style="margin-left: 0.5rem; cursor : pointer;" id="dark" xmlns="http://www.w3.org/2000/svg" width="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      </div>
+      <div class="sub-header">
+        <img src="6dots.svg" alt="">
+        <h2>Look no further for a creamy and ultra smooth classic cheesecake recipe! Paired with a buttery graham cracker crust, no one can deny its simple decadence. For the best results, bake in a water bath.</h2>
+      </div>
+    </header>
+    <main>
+      <img id="main-image" src="photo1.png" alt="">
+      <section>
+        <article>
+          <div class="ingredient">
+            <h3>Ingredients</h3>
+          </div>
+          <div class="instruction">
+            <h3>Instructions</h3>
+          </div>
+          <p id="source">Source: https://sallysbakingaddiction.com/classic-cheesecake/</p>
+        </article>
+        <aside>
+        </aside>
+      </section>
+    </main>
+    <footer>Zernonia @DevChallenges.io</footer>
+  </div>
+  
+  <script src="script.js"></script>
+  <script>
+    // initiate the async function
+    (async () => {
+      let recipe = await getData('recipe')
+      populateHTML(recipe)
+    })()
+   
+    // dark mode toggle
+    let light
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+      light = false
+      document.documentElement.setAttribute('data-theme', 'dark')
+    } else {
+      light = true
+    }
+
+    let svg = document.querySelector('#dark')
+    svg.onclick = () => {
+      if(light){
+        light = false
+        document.documentElement.setAttribute('data-theme', 'dark')
+      } else {
+        light = true
+        document.documentElement.setAttribute('data-theme', 'light')
+      }
+    }
+  </script>
+</body>
+</html>
