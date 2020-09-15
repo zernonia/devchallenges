@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <title>Checkout Page</title>
+</head>
+<body>
+  <div class="container">
+    <header>Checkout 
+      <svg style="cursor : pointer;" id="dark" xmlns="http://www.w3.org/2000/svg" width="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+      </svg></header> 
+    <section>
+      <main>
+        <form action="">
+          <div>
+            <h2>Contact information</h2>
+            <label for="email">E-mail</label>
+            <div class="input">
+              <svg width='20' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+              </svg>
+              <input type="email" required placeholder="Enter your email...">
+            </div>
+            <label for="phone">Phone</label>
+            <div class="input">
+              <svg width='20' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              <input type="tel" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" required placeholder="Enter your phone...">
+            </div>
+          </div>
+          <div>
+            <h2>Shipping address</h2>
+            <label for="fullName">Full name</label>
+            <div class="input">
+              <svg width='20' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd" />
+              </svg>
+              <input type="text" required placeholder="Enter your name...">
+            </div>
+            <label for="address">Address</label>
+            <div class="input">
+              <svg width='20' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+              </svg>
+              <input type="text" required placeholder="Your address...">
+            </div>
+            <label for="city">City</label>
+            <div class="input">
+              <svg width='20' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.496 2.132a1 1 0 00-.992 0l-7 4A1 1 0 003 8v7a1 1 0 100 2h14a1 1 0 100-2V8a1 1 0 00.496-1.868l-7-4zM6 9a1 1 0 00-1 1v3a1 1 0 102 0v-3a1 1 0 00-1-1zm3 1a1 1 0 012 0v3a1 1 0 11-2 0v-3zm5-1a1 1 0 00-1 1v3a1 1 0 102 0v-3a1 1 0 00-1-1z" clip-rule="evenodd" />
+              </svg>
+              <input type="text" required placeholder="Your city...">
+            </div>
+            <div class="split">
+              <div class="split-form">
+                <label for="country" class="half">Country</label>
+                <div class="input">
+                  <svg width='20' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd" />
+                  </svg>
+                  <select required name="country" id="country">
+                    <option value="" disabled hidden selected>Your country...</option>
+                    <option value="United State">United State</option>
+                    <option value="Australia">Australia</option>
+                    <option value="China">China</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Singapore">Singapore</option>
+                  </select>
+                  <svg id="dropdown" width='20' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                </div>
+              </div>
+              <div class="split-form">
+                <label for="postalCode">Postal code</label>
+                <div class="input">
+                  <svg width='20' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z" />
+                    <path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd" />
+                  </svg>
+                  <input type="text" required placeholder="Your postal code...">
+                </div>
+              </div>
+            </div>
+            <div id="check">
+              <input type="checkbox" name="saveInfo" id="saveInfo">
+              <label for="saveInfo">
+                Save this information for next time
+              </label>
+            </div>
+          </div>
+          <!-- <button>Continue</button> -->
+          <input type="submit" id="button" value="Submit" onclick="checkForm(event)">
+        </form>
+      </main>
+      <aside>
+        <div class="item-list">
+          <div class="item">
+            <img src="photo1.png" alt="">
+            <div class="box">
+              <div class="box-title">
+                <h3>Vintage Backbag</h3>
+                <div>
+                  <h4>$54.99</h4>
+                  <h5>$94.99</h5>
+                </div>
+              </div>
+              <div class="box-button">
+                <svg width='20' id="minus-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd" />
+                </svg>
+                <h3>1</h3>
+                <svg width='20' id="plus-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="photo2.png" alt="">
+            <div class="box">
+              <div class="box-title">
+                <h3>Vintage Backbag</h3>
+                <div>
+                  <h4>$74.99</h4>
+                  <h5>$124.99</h5>
+                </div>
+              </div>
+              <div class="box-button">
+                <svg width='20' id="minus-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd" />
+                </svg>
+                <h3>1</h3>
+                <svg width='20' id="plus-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="result">
+          <div class="shipping">
+            <h2>Shipping</h2>
+            <p>$19</p>
+          </div>
+          <div class="total">
+            <h2>Total</h2>
+            <p>$148.98</p>
+          </div>
+        </div>
+      </aside>
+
+    </section>
+    <footer>
+      Zernonia @ DevChallenges.io
+    </footer>
+    <div class="notification">
+      <svg width='50' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <h1 style="margin-top: 1rem;">Success</h1>
+    </div>
+  </div>
+
+  <script>
+    let light
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+      light = false
+      document.documentElement.setAttribute('data-theme', 'dark')
+    } else {
+      light = true
+    }
+
+    let svg = document.querySelector('#dark')
+    svg.onclick = () => {
+      if(light){
+        light = false
+        document.documentElement.setAttribute('data-theme', 'dark')
+      } else {
+        light = true
+        document.documentElement.setAttribute('data-theme', 'light')
+      }
+    }
+
+
+    let item1 = 1
+    let cost1 = 54.99
+    let item2 = 1
+    let cost2 = 74.99
+    let shipping = 19
+    let finalResult = () => {
+          item1 + item2 == 0 ? shipping = 0 : shipping = 19
+          return (cost1*item1 + cost2*item2 + shipping).toFixed(2)
+        } 
+
+    let plus1 = document.querySelector('#plus-1')
+    let plus2 = document.querySelector('#plus-2')
+    let minus1 = document.querySelector('#minus-1')
+    let minus2 = document.querySelector('#minus-2')
+
+    let boxCount1 = document.querySelectorAll('.box-button')[0]
+    let boxCount2 = document.querySelectorAll('.box-button')[1]
+    let totalPrice = document.querySelector('.total')
+
+    plus1.onclick = () => {
+      item1 ++
+      boxCount1.querySelector('h3').innerText = `${item1}`
+      totalPrice.querySelector('p').innerText = `$${finalResult()}`
+    }
+    minus1.onclick = () => {
+      item1 <= 0 ? '' : item1 --
+      boxCount1.querySelector('h3').innerText = `${item1}`
+      totalPrice.querySelector('p').innerText = `$${finalResult()}`
+    }
+    plus2.onclick = () => {
+      item2 ++
+      boxCount2.querySelector('h3').innerText = `${item2}`
+      totalPrice.querySelector('p').innerText = `$${finalResult()}`
+    }
+    minus2.onclick = () => {
+      item2 <= 0 ? '' : item2 --
+      boxCount2.querySelector('h3').innerText = `${item2}`
+      totalPrice.querySelector('p').innerText = `$${finalResult()}`
+    }  
+
+    let notification = document.querySelector('.notification')
+    let form = document.querySelector('form')
+    let inputList = form.querySelectorAll('input')
+
+    function checkForm(e) {
+      let count = 0
+      for(var i = 0; i < inputList.length -2 ; i ++) {
+        let input = inputList[i]
+        input.checkValidity() == true ? count ++ : ''
+      }
+      if(count == 6) {
+        e.preventDefault()
+        notification.style.display = 'flex'
+        notification.style.animation = 'popOut 1s 2 ease-in alternate'
+        setTimeout(() => {
+          notification.style.display = 'none'
+        }, 4000);
+      } 
+    }
+
+
+  </script>
+</body>
+</html>
