@@ -1,0 +1,47 @@
+html{
+  --backg: white;
+  --backg-alt: aliceblue;
+  --highlight: rgb(198, 228, 255);
+  --text: black;
+  --border : lightgray;
+  --text-alt : #828282;
+  --text-auto : black;
+  --shadow: #e4e4e496;
+  --search: white;
+  --svg : rgba(235, 87, 87, 0.72);
+  background: var(--backg);
+  color: var(--text);
+}
+
+html[data-theme='dark']{
+  --backg: #1f1e1e;
+  --backg-alt : rgba(5, 5, 5, 0.541);
+  --highlight: blue;
+  --text: white;
+  --border : black;
+  --text-alt : #acacac;
+  --text-auto : #8effd9;
+  --shadow: #10101063;
+  --search: rgba(235, 87, 87, 0.9);
+  --svg: white
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: minmax(60px, 100px) 1fr minmax(60px, 100px);
+  min-height: 100vh;
+  place-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
