@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Raleway:wght@400;500;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+html{
+  --backg: white;
+  --text: #333333;
+  --text-2: #4F4F4F;
+  background: var(--backg);
+  color: var(--text);
+}
+
+html[data-theme='dark']{
+  --backg: #1f1e1e;
+  --text: white;
+  --text: rgb(207, 207, 207);
+
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+
