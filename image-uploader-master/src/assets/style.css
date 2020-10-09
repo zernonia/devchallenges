@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+}
+body {
+  margin: 0 !important;
+}
+h1,h2,h3,h4,h5,span,input {
+  color: darkslategray;
+}
