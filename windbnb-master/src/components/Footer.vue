@@ -1,7 +1,7 @@
 <template>
   <footer>
     <span>
-      Zernonia @ DevChallenges.io
+      Zernonia @ zernonia.com
     </span>
   </footer>
 </template>

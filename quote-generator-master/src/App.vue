@@ -13,7 +13,7 @@
     <transition name="slide-fade">
       <router-view></router-view>
     </transition>
-    <footer>Zernonia @ DevChallenges.io</footer>
+    <footer>Zernonia @ zernonia.com</footer>
   </div>
 </template>
 

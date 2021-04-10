@@ -29,7 +29,9 @@
         <HighlightCard :data="todayData" />
       </div>
     </div>
-    <footer>Zernonia @ DevChallenges.io</footer>
+    <footer>
+      Zernonia @ <a href="https://www.zernonia.com">zernonia.com</a>
+    </footer>
   </div>
 </template>
 

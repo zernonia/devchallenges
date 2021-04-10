@@ -20,14 +20,14 @@ export const state = reactive({
   },
   getData: async (description: string, fullTime = false, location = "") => {
     state.loading = true
-    const data = await fetch(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${description}&full_time=${fullTime}&location=${location}`).then(res => res.json())
+    const data = await fetch(`https://cors-zernonia.herokuapp.com/https://jobs.github.com/positions.json?description=${description}&full_time=${fullTime}&location=${location}`).then(res => res.json())
     state.loading = false
     state.joblist = data
     state.totalPage(5)
     
   },
   getSingleData: async (id: string) => {
-    const data = await fetch(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions/${id}.json`).then(res => res.json())
+    const data = await fetch(`https://cors-zernonia.herokuapp.com/https://jobs.github.com/positions/${id}.json`).then(res => res.json())
     state.job = data
   },
   getSelectedData: (id: string) => {

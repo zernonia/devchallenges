@@ -11,7 +11,9 @@
       class="w-full h-20 p-8 sm:px-16 rounded-t-3xl text-white flex flex-col sm:flex-row justify-between items-center bg-black"
     >
       <CatLogo color="#ffffff" />
-      <span>Zernonia @ DevChallenge.io </span>
+      <span
+        >Zernonia @ <a href="https://www.zernonia.com">zernonia.com</a></span
+      >
     </footer>
   </div>
 </template>

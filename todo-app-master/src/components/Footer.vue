@@ -1,5 +1,5 @@
 <template>
-  <footer>Zernonia @ DevChallenges.io</footer>
+  <footer>Zernonia @ zernonia.com</footer>
 </template>
 
 <script lang="ts">
